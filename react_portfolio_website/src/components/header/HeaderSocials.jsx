@@ -1,7 +1,7 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { FiDribbble } from "react-icons/fi";
+import { FaTwitter } from "react-icons/fa";
 
 const HeaderSocials = () => {
   return (
@@ -12,8 +12,8 @@ const HeaderSocials = () => {
       <a href="https://github.com/raman-davidovich" target="_blank">
         <FaGithub />
       </a>
-      <a href="https://dribbble.com" target="_blank">
-        <FiDribbble />
+      <a href="https://twitter.com/RoDavidovich" target="_blank">
+        <FaTwitter />
       </a>
     </div>
   );
