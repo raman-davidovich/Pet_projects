@@ -1,56 +1,15 @@
 import React from "react";
 import "./portfolio.css";
-import IMG1 from "../../assets/portfolio1.jpg";
-import IMG2 from "../../assets/portfolio2.jpg";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
-import IMG5 from "../../assets/portfolio5.png";
-import IMG6 from "../../assets/portfolio6.jpg";
-
-//DO NOT USE THE IMAGES IN PRODUCTION
+import IMG1 from "../../assets/portfolio1.jpeg";
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
+    title: "React 3D animation website (iPhone 14 presentation)",
+    technologies: "ReactJS, WebGi SDK, ThreeJS, GSAP",
     github: "https://github.com",
-    demo: "https://dribbble.com/shots/16673715-Crypto-currency-dashboard-and-financial-data-visualization",
-  },
-  {
-    id: 2,
-    image: IMG2,
-    title: "Charts templates & infographics in Figma",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/16580766-Orion-UI-kit-Charts-templates-infographics-in-Figma",
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: "Figma dashboard UI kit for data design web apps",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/17290917-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: "Maintaing tasks and tracking progress",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/16955822-Maintaing-tasks-and-tracking-progress",
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: "Charts templates & infographics in Figma",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/16541289-Orion-UI-kit-Charts-templates-infographics-in-Figma",
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: "Charts templates & infographics in Figma",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/15887665-Orion-UI-kit-Charts-templates-infographics-in-Figma",
+    demo: "https://dribbble.com",
   },
 ];
 
@@ -61,13 +20,14 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container">
-        {data.map(({ id, image, title, github, demo }) => {
+        {data.map(({ id, image, title, technologies, github, demo }) => {
           return (
             <article key={id} className="portfolio__item">
               <div className="portfolio__item-image">
                 <img src={image} alt={title} />
               </div>
               <h3>{title}</h3>
+              <h4>{technologies}</h4>
               <div className="portfolio__item-cta">
                 <a href={github} className="btn" target="_blank">
                   Github
