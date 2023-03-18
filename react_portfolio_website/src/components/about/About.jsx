@@ -32,15 +32,16 @@ const About = () => {
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>0+ Completed</small>
+              <small>1 Completed</small>
             </article>
           </div>
 
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia,
-            neque doloremque voluptatem placeat odio nulla quasi ratione, vitae
-            quae, temporibus maiores architecto nobis corrupti praesentium non
-            facilis! Dolor, quasi nesciunt!
+            I'm an enthusiastic and detail-oriented Frontend Software Engineer
+            seeking an entry-level position to use my skills in coding and
+            troubleshooting complex problems. Currently located in Belarus.
+            Ready to relocate. I am looking for any type of employment:
+            full-time, partial, remote, internship.
           </p>
 
           <a href="#contacts" className="btn btn-primary">
