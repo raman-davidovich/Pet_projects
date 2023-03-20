@@ -6,7 +6,7 @@ import AVTR3 from "../../assets/avatar3.webp";
 import AVTR4 from "../../assets/avatar4.jpeg";
 
 // import Swiper core and required modules
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import Swiper styles
@@ -47,10 +47,15 @@ const Testimonials = () => {
       <Swiper
         className="container testimonials__container"
         // install Swiper modules
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination]}
         spaceBetween={40}
         slidesPerview={1}
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          stopOnLastSlide: true,
+        }}
       >
         {data.map(({ avatar, name, review }, index) => {
           return (
