@@ -54,7 +54,7 @@ const Testimonials = () => {
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
-          stopOnLastSlide: true,
+          stopOnLastSlide: false,
         }}
       >
         {data.map(({ avatar, name, review }, index) => {
