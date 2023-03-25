@@ -14,23 +14,26 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME} alt="About me photo" />
+            <img src={ME} alt="Photo of serious Raman" />
           </div>
         </div>
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
-              <FaAward className="about__icon" />
+              <FaAward className="about__icon" alt="Award icon" />
               <h5>Experience</h5>
               <small>1+ Years Working</small>
             </article>
             <article className="about__card">
-              <FiUsers className="about__icon" />
+              <FiUsers className="about__icon" alt="People icon" />
               <h5>Clients</h5>
               <small>0+ Worldwide</small>
             </article>
             <article className="about__card">
-              <VscFolderLibrary className="about__icon" />
+              <VscFolderLibrary
+                className="about__icon"
+                alt="Folder library icon"
+              />
               <h5>Projects</h5>
               <small>1 Completed</small>
             </article>
