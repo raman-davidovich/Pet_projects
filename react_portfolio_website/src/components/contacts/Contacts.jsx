@@ -55,15 +55,23 @@ const Contacts = () => {
             name="name"
             placeholder="Your Full Name"
             required
+            tabIndex={1}
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            tabIndex={2}
+          />
           <textarea
             name="message"
             rows="7"
             placeholder="Your Message"
             required
+            tabIndex={3}
           ></textarea>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" tabIndex={4}>
             Send Message
           </button>
         </form>
