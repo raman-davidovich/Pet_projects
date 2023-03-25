@@ -24,7 +24,10 @@ const Contacts = () => {
       <div className="container contacts__container">
         <div className="contacts__options">
           <article className="contacts__option">
-            <MdOutlineEmail className="contacts__option-icon" />
+            <MdOutlineEmail
+              className="contacts__option-icon"
+              alt="Envelope icon"
+            />
             <h4>Email</h4>
             <h5>raman.davidovich@gmail.com</h5>
             <a href="mailto:raman.davidovich@gmail.com" target="_blank">
@@ -32,7 +35,10 @@ const Contacts = () => {
             </a>
           </article>
           <article className="contacts__option">
-            <FaTelegramPlane className="contacts__option-icon" />
+            <FaTelegramPlane
+              className="contacts__option-icon"
+              alt="Telegram icon"
+            />
             <h4>Telegram</h4>
             <h5>Raman Davidovich</h5>
             <a href="https://telegram.me/Raman_Davidovich" target="_blank">
@@ -40,7 +46,7 @@ const Contacts = () => {
             </a>
           </article>
           <article className="contacts__option">
-            <SlCallOut className="contacts__option-icon" />
+            <SlCallOut className="contacts__option-icon" alt="Call out icon" />
             <h4>Phone Call</h4>
             <h5>+375(29) 328-47-97</h5>
             <a href="tel:+375293284797" target="_blank">
