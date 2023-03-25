@@ -23,6 +23,9 @@
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
+
+  --rt-color-white: var(--color-white);
+  --rt-color-info: var(--color-primary);
 }
 
 html {
