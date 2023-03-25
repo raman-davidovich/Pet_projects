@@ -26,6 +26,7 @@
 
   --rt-color-white: var(--color-white);
   --rt-color-info: var(--color-primary);
+  --rt-opacity: 1 !important;
 }
 
 html {
