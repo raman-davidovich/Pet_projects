@@ -13,49 +13,70 @@ const Experience = () => {
           <h3>Frontend Development</h3>
           <div className="experience__content">
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>HTML</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>CSS</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>JavaScript</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>TypeScript</h4>
                 <small className="text-light">Basic</small>
               </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>Tailwind</h4>
                 <small className="text-light">Basic</small>
               </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>ReactJS</h4>
                 <small className="text-light">Basic</small>
               </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>Figma</h4>
                 <small className="text-light">Basic</small>
@@ -68,14 +89,20 @@ const Experience = () => {
           <h3>Backend Development</h3>
           <div className="experience__content">
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>Node JS</h4>
                 <small className="text-light">Basic</small>
               </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
+              <BsPatchCheckFill
+                className="experience__details-icon"
+                alt="Styled list item marker"
+              />
               <div>
                 <h4>MySQL</h4>
                 <small className="text-light">Basic</small>
