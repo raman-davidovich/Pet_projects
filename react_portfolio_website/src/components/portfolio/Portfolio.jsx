@@ -1,6 +1,7 @@
 import React from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/portfolio1.jpeg";
+import { Tooltip } from "react-tooltip";
 
 const data = [
   {
@@ -29,12 +30,27 @@ const Portfolio = () => {
               <h3>{title}</h3>
               <h4>{technologies}</h4>
               <div className="portfolio__item-cta">
-                <a href={github} className="btn" target="_blank">
+                <a
+                  href={github}
+                  className="btn tooltip_portfolio"
+                  target="_blank"
+                  data-tooltip-content="Visit repository"
+                  data-tooltip-delay-show={2000}
+                  data-tooltip-variant="info"
+                >
                   Github
                 </a>
-                <a href={demo} className="btn btn-primary" target="_blank">
+                <a
+                  href={demo}
+                  className="btn btn-primary tooltip_portfolio"
+                  target="_blank"
+                  data-tooltip-content="Visit website"
+                  data-tooltip-delay-show={2000}
+                  data-tooltip-variant="info"
+                >
                   Live Demo
                 </a>
+                <Tooltip anchorSelect=".tooltip_portfolio" />
               </div>
             </article>
           );
