@@ -63,7 +63,7 @@ const Certifications = () => {
           return (
             <SwiperSlide key={index} className="certificat">
               <div className="certificat__picture">
-                <img src={picture} alt={title} />
+                <img src={picture} alt={`Photo of certificate ${title}`} />
               </div>
               <h3 className="certificat__title">{title}</h3>
               <small className="certificat__skills">Skills: {skills}</small>
