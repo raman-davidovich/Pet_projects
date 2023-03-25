@@ -16,25 +16,40 @@ const Services = () => {
 
           <ul className="service__list">
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Users and product research.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>
                 Setting up information architecture to identify buyer persona.
               </p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Creating wireframes and user flows.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Creating prototypes and improve them with new data.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Handling visual design.</p>
             </li>
           </ul>
@@ -47,37 +62,61 @@ const Services = () => {
 
           <ul className="service__list">
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>
                 Selection and registration of a domain and hosting for the site.
               </p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Website development.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Refinement and updating of websites.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Crossbrowser compatibility.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Refactoring and optimization of current functionality.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Image editing.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Accessibility.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Search engine optimisation.</p>
             </li>
           </ul>
@@ -90,19 +129,31 @@ const Services = () => {
 
           <ul className="service__list">
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Research.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Placement.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Publication.</p>
             </li>
             <li>
-              <BiCheck className="service__list-icon" />
+              <BiCheck
+                className="service__list-icon"
+                alt="Styled list item marker"
+              />
               <p>Promotion.</p>
             </li>
           </ul>
