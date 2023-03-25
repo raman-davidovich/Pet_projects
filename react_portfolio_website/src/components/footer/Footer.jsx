@@ -37,13 +37,13 @@ const Footer = () => {
 
       <div className="footer__socials">
         <a href="https://facebook.com" target="_blank">
-          <FaFacebookF />
+          <FaFacebookF alt="Facebook icon" />
         </a>
         <a href="https://instagram.com" target="_blank">
-          <FiInstagram />
+          <FiInstagram alt="Instagram icon" />
         </a>
         <a href="https://twitter.com" target="_blank">
-          <IoLogoTwitter />
+          <IoLogoTwitter alt="Twitter icon" />
         </a>
       </div>
 
