@@ -1,7 +1,7 @@
 {
   "name": "react_portfolio_website",
-  "homepage": "https://mysideparojects.tech",
-  "version": "0.1.0",
+  "homepage": "https://mysideprojects.tech",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
