@@ -21,7 +21,7 @@ const data = [
   },
   {
     picture: Certificat2,
-    title: "General Engligh (Intermediate) at Skyeng",
+    title: "General English (Intermediate) at Skyeng",
     skills: "Spoken English · English",
   },
 ];
