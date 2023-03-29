@@ -49,7 +49,7 @@ const Testimonials = () => {
         // install Swiper modules
         modules={[Autoplay, Pagination]}
         spaceBetween={40}
-        slidesPerview={1}
+        slidesPerView={1}
         pagination={{ clickable: true }}
         autoplay={{
           delay: 5000,
