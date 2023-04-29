@@ -3,13 +3,27 @@
   padding-bottom: 4rem;
 }
 
-.client__avatar {
-  width: 4rem;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  border: 0.4rem solid var(--color-primary-variant);
+.client {
+  &__avatar {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 0.4rem solid var(--color-primary-variant);
+  }
+
+  &__review {
+    color: var(--color-light);
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+  }
+
+  &__name {
+    font-size: 0.83rem;
+  }
 }
 
 .testimonial {
@@ -18,14 +32,6 @@
   padding: 2rem;
   border-radius: 2rem;
   user-select: none;
-}
-
-.client__review {
-  color: var(--color-light);
-  font-weight: 300;
-  display: block;
-  width: 80%;
-  margin: 0.8rem auto 0;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
