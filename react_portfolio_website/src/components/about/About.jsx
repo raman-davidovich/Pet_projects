@@ -1,55 +1,81 @@
-import React from "react";
-import "./about.css";
-import ME from "../../assets/me-about.jpeg";
-import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
+import React, { useContext, useEffect } from "react";
+import "./about.scss";
+import ME from "../../assets/me-about.webp";
+import cardsInfo from "./constants";
+import SectionTitle from "../shared/SectionTitle/SectionTitle";
+import { useInView } from "react-intersection-observer";
+import { InViewIDContext } from "../../context/InViewIDContext";
+import { Fade } from "react-awesome-reveal";
+import Button from "../shared/Button/Button";
+import useWindowSize from "@rooks/use-window-size";
+import { getThreshold } from "../shared/utils";
 
 const About = () => {
+  const { innerHeight, innerWidth } = useWindowSize();
+  const { changeInViewID } = useContext(InViewIDContext);
+
+  const { ref, inView } = useInView({
+    threshold: getThreshold(innerHeight, innerWidth),
+  });
+
+  useEffect(
+    () => changeInViewID(inView ? "about" : ""),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [inView]
+  );
+
   return (
-    <section id="about">
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+    <section id="about" ref={ref}>
+      <SectionTitle>
+        <Fade delay={500} direction="down" cascade triggerOnce damping={0.3}>
+          <span>Get To Know</span>
+          <br />
+          <div>About Me</div>
+        </Fade>
+      </SectionTitle>
 
       <div className="container about__container">
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src={ME} alt="Photo of serious Raman" />
+        <Fade delay={1500} direction="left" triggerOnce>
+          <div className="about__me">
+            <div className="about__me-image">
+              <img src={ME} alt="Serious Raman" />
+            </div>
           </div>
-        </div>
+        </Fade>
         <div className="about__content">
-          <div className="about__cards">
-            <article className="about__card">
-              <FaAward className="about__icon" alt="Award icon" />
-              <h5>Experience</h5>
-              <small>1+ Years Working</small>
-            </article>
-            <article className="about__card">
-              <FiUsers className="about__icon" alt="People icon" />
-              <h5>Clients</h5>
-              <small>0+ Worldwide</small>
-            </article>
-            <article className="about__card">
-              <VscFolderLibrary
-                className="about__icon"
-                alt="Folder library icon"
-              />
-              <h5>Projects</h5>
-              <small>1 Completed</small>
-            </article>
-          </div>
+          <ul className="about__cards">
+            <Fade
+              delay={2000}
+              direction="right"
+              cascade
+              triggerOnce
+              damping={0.5}
+            >
+              {cardsInfo.map(({ icon, title, information }) => {
+                return (
+                  <li key={title} className="about__card">
+                    {icon}
+                    <h3>{title}</h3>
+                    <small>{information}</small>
+                  </li>
+                );
+              })}
+            </Fade>
+          </ul>
 
-          <p>
-            I'm an enthusiastic and detail-oriented Frontend Software Engineer
-            seeking an entry-level position to use my skills in coding and
-            troubleshooting complex problems. Currently located in Belarus.
-            Ready to relocate. I am looking for any type of employment:
-            full-time, partial, remote, internship.
-          </p>
+          <Fade delay={3500} direction="up" cascade triggerOnce damping={0.4}>
+            <p>
+              I'm an enthusiastic and detail-oriented Frontend Software Engineer
+              seeking an entry-level position to use my skills in coding and
+              troubleshooting complex problems. Currently located in Belarus.
+              Ready to relocate. I am looking for any type of employment:
+              full-time, partial, remote, internship.
+            </p>
 
-          <a href="#contacts" className="btn btn-primary">
-            Let's Talk
-          </a>
+            <Button tag="a" href="#contacts" primary>
+              Let's Talk
+            </Button>
+          </Fade>
         </div>
       </div>
     </section>
