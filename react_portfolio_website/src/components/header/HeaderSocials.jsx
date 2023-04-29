@@ -1,45 +1,31 @@
 import React from "react";
-import { BsLinkedin } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import headerData from "./ constants";
 import { Tooltip } from "react-tooltip";
+import { Fade } from "react-awesome-reveal";
 
 const HeaderSocials = () => {
   return (
     <div className="header__socials">
-      <a
-        href="https://linkedin.com/in/raman-davidovich"
-        target="_blank"
-        className="tooltip_header-socials"
-        data-tooltip-content="Linkedin"
-        data-tooltip-delay-show={500}
-        data-tooltip-variant="info"
-        data-tooltip-place="right"
-      >
-        <BsLinkedin alt="Linkedin icon" />
-      </a>
-      <a
-        href="https://github.com/raman-davidovich"
-        target="_blank"
-        className="tooltip_header-socials"
-        data-tooltip-content="Github"
-        data-tooltip-delay-show={500}
-        data-tooltip-variant="info"
-        data-tooltip-place="right"
-      >
-        <FaGithub alt="Github icon" />
-      </a>
-      <a
-        href="https://twitter.com/RoDavidovich"
-        target="_blank"
-        className="tooltip_header-socials"
-        data-tooltip-content="Twitter"
-        data-tooltip-delay-show={500}
-        data-tooltip-variant="info"
-        data-tooltip-place="right"
-      >
-        <FaTwitter alt="Twitter icon" />
-      </a>
+      <Fade delay={4000} direction="left" cascade triggerOnce damping={0.3}>
+        {headerData.map(({ href, dataTooltipContent, icon }) => {
+          return (
+            <a
+              key={dataTooltipContent}
+              href={href}
+              aria-label={`Visit Raman's ${dataTooltipContent} account.`}
+              target="_blank"
+              rel="noreferrer"
+              className="tooltip_header-socials"
+              data-tooltip-content={dataTooltipContent}
+              data-tooltip-delay-show={500}
+              data-tooltip-variant="info"
+              data-tooltip-place="right"
+            >
+              {icon}
+            </a>
+          );
+        })}
+      </Fade>
       <Tooltip anchorSelect=".tooltip_header-socials" />
     </div>
   );
