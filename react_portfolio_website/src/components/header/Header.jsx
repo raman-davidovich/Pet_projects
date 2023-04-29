@@ -1,26 +1,53 @@
-import React from "react";
-import "./header.css";
+import React, { useEffect, useContext } from "react";
+import "./header.scss";
 import CTA from "./CTA";
-import ME from "../../assets/me.png";
+import ME from "../../assets/me.webp";
 import HeaderSocials from "./HeaderSocials";
+import { useInView } from "react-intersection-observer";
+import { InViewIDContext } from "../../context/InViewIDContext";
+import { Fade } from "react-awesome-reveal";
 
 const Header = () => {
+  const { changeInViewID } = useContext(InViewIDContext);
+
+  const { ref, inView } = useInView({
+    threshold: 0.7,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      changeInViewID("#");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
   return (
-    <header>
+    <header ref={ref}>
       <div className="container header__container">
-        <h5>Hello I'm</h5>
-        <h1>Raman Davidovich</h1>
-        <h5 className="text-light">Frontend Developer</h5>
+        <Fade delay={500} direction="down" cascade triggerOnce>
+          <h5>Hello I'm</h5>
+          <h1>Raman Davidovich</h1>
+          <h2 className="text-light">Frontend Developer</h2>
+        </Fade>
+
         <CTA />
+
         <HeaderSocials />
 
-        <div className="me">
-          <img src={ME} alt="Photo of smilling Raman" />
-        </div>
+        <Fade delay={3000} direction="up" triggerOnce>
+          <div className="me">
+            <img src={ME} alt="Smilling Raman" />
+          </div>
+        </Fade>
 
-        <a href="#contacts" className="scroll__down">
-          Scroll Down
-        </a>
+        <Fade
+          delay={4000}
+          direction="down"
+          triggerOnce
+          className="scroll__down"
+        >
+          <a href="#contacts">Scroll Down</a>
+        </Fade>
       </div>
     </header>
   );
