@@ -1,10 +1,11 @@
 import React from "react";
-import "./certifications.css";
-import Certificat1 from "../../assets/TeachMeSkills.jpg";
-import Certificat2 from "../../assets/Skyeng.jpg";
+import "./certifications.scss";
+import SectionTitle from "../shared/SectionTitle/SectionTitle";
+import certificatsInfo from "./constants";
+import { getSlidesPerView, getModules, getSpaceBetween } from "./utils";
+import { Fade } from "react-awesome-reveal";
 
 // import Swiper core and required modules
-import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import Swiper styles
@@ -12,65 +13,60 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-const data = [
-  {
-    picture: Certificat1,
-    title: "Front End Developer at TeachMeSkills",
-    skills:
-      "GitHub · Front-End Development · Tailwind CSS · HTML · Redux.js · React.js · TypeScript · Cascading Style Sheets (CSS) · Git · HTML5 · JavaScript",
-  },
-  {
-    picture: Certificat2,
-    title: "General English (Intermediate) at Skyeng",
-    skills: "Spoken English · English",
-  },
-];
+// import Window size hook
+import useWindowSize from "@rooks/use-window-size";
 
 const Certifications = () => {
-  const screenWidth = window.innerWidth;
+  const { innerWidth } = useWindowSize();
+  const slidesPerView = getSlidesPerView(innerWidth);
+  const modules = getModules(innerWidth);
+  const spaceBetween = getSpaceBetween(innerWidth);
   return (
     <section id="certifications">
-      <h5>Knowledge confirmation</h5>
-      <h2>Licences & certifications</h2>
+      <SectionTitle>
+        <Fade delay={500} direction="down" cascade triggerOnce damping={0.3}>
+          <span>Knowledge confirmation</span>
+          <br />
+          <div>Licences & certifications</div>
+        </Fade>
+      </SectionTitle>
 
-      <Swiper
-        className="container certifications__container"
-        //install Swiper modules
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={screenWidth > 800 ? 2 : 1}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          slideShadows: false,
-        }}
-        modules={
-          screenWidth > 800
-            ? [Autoplay, EffectCoverflow, Pagination]
-            : [Autoplay, Pagination]
-        }
-        spaceBetween={screenWidth > 800 ? 0 : 40}
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-          stopOnLastSlide: false,
-        }}
-      >
-        {data.map(({ picture, title, skills }, index) => {
-          return (
-            <SwiperSlide key={index} className="certificat">
-              <div className="certificat__picture">
-                <img src={picture} alt={`Photo of certificate ${title}`} />
-              </div>
-              <h3 className="certificat__title">{title}</h3>
-              <small className="certificat__skills">Skills: {skills}</small>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <Fade delay={1500} direction="up" triggerOnce>
+        <Swiper
+          className="container certifications__container"
+          //install Swiper modules
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={slidesPerView}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            slideShadows: false,
+          }}
+          modules={modules}
+          spaceBetween={spaceBetween}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 30000,
+            disableOnInteraction: false,
+            stopOnLastSlide: false,
+          }}
+        >
+          {certificatsInfo.map(({ picture, title, skills }) => {
+            return (
+              <SwiperSlide key={picture} className="certificat">
+                <div className="certificat__picture">
+                  <img src={picture} alt={`${title} certificate`} />
+                </div>
+                <h3 className="certificat__title">{title}</h3>
+                <small className="certificat__skills">Skills: {skills}</small>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </Fade>
     </section>
   );
 };
