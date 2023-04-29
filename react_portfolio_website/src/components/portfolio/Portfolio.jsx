@@ -1,61 +1,57 @@
 import React from "react";
-import "./portfolio.css";
-import IMG1 from "../../assets/portfolio1.jpeg";
+import "./portfolio.scss";
+import SectionTitle from "../shared/SectionTitle/SectionTitle";
+import portfolioData from "./constants";
 import { Tooltip } from "react-tooltip";
-
-const data = [
-  {
-    id: 1,
-    image: IMG1,
-    title: "React 3D animation website (iPhone 14 presentation)",
-    technologies: "ReactJS, WebGi SDK, ThreeJS, GSAP",
-    github: "https://github.com",
-    demo: "https://dribbble.com",
-  },
-];
+import { Fade } from "react-awesome-reveal";
 
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <SectionTitle>
+        <Fade delay={500} direction="down" cascade triggerOnce damping={0.3}>
+          <span>My Recent Work</span>
+          <br />
+          <div>Portfolio</div>
+        </Fade>
+      </SectionTitle>
 
-      <div className="container portfolio__container">
-        {data.map(({ id, image, title, technologies, github, demo }) => {
-          return (
-            <article key={id} className="portfolio__item">
-              <div className="portfolio__item-image">
-                <img src={image} alt={`${title} screenshot`} />
-              </div>
-              <h3>{title}</h3>
-              <h4>{technologies}</h4>
-              <div className="portfolio__item-cta">
-                <a
-                  href={github}
-                  className="btn tooltip_portfolio"
-                  target="_blank"
-                  data-tooltip-content="Visit repository"
-                  data-tooltip-delay-show={2000}
-                  data-tooltip-variant="info"
-                >
-                  Github
-                </a>
-                <a
-                  href={demo}
-                  className="btn btn-primary tooltip_portfolio"
-                  target="_blank"
-                  data-tooltip-content="Visit website"
-                  data-tooltip-delay-show={2000}
-                  data-tooltip-variant="info"
-                >
-                  Live Demo
-                </a>
-                <Tooltip anchorSelect=".tooltip_portfolio" />
-              </div>
-            </article>
-          );
-        })}
-      </div>
+      <ul className="container portfolio__container">
+        <Fade delay={1500} direction="right" cascade triggerOnce damping={0.5}>
+          {portfolioData.map(({ id, image, title, technologies, links }) => {
+            return (
+              <li key={id} className="portfolio__item">
+                <div className="portfolio__item-image">
+                  <img src={image} alt={`${title} screenshot`} />
+                </div>
+                <h3>{title}</h3>
+                <p>{technologies}</p>
+                <div className="portfolio__item-cta">
+                  {links.map(
+                    ({ href, className, dataTooltipContent, content }) => {
+                      return (
+                        <a
+                          key={content}
+                          href={href}
+                          className={className}
+                          target="_blank"
+                          rel="noreferrer"
+                          data-tooltip-content={dataTooltipContent}
+                          data-tooltip-delay-show={2000}
+                          data-tooltip-variant="info"
+                        >
+                          {content}
+                        </a>
+                      );
+                    }
+                  )}
+                  <Tooltip anchorSelect=".tooltip_portfolio" />
+                </div>
+              </li>
+            );
+          })}
+        </Fade>
+      </ul>
     </section>
   );
 };
