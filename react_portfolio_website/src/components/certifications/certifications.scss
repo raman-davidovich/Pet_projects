@@ -4,49 +4,51 @@
   overflow: visible;
 }
 
-.certificat__picture {
-  border-radius: 1.5rem;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
 .certificat {
   background: var(--color-bg-variant);
   text-align: center;
   padding: 2rem;
   border-radius: 2rem;
   user-select: none;
-}
 
-.certificat__skills {
-  color: var(--color-light);
-  font-weight: 300;
-  display: block;
-  width: 80%;
-  margin: 0.8rem auto 0;
+  &__picture {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  &__skills {
+    color: var(--color-light);
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+  }
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   background: var(--color-primary);
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  transition-timing-function: ease !important;
-  transition-duration: 1000ms !important;
-}
+.swiper {
+  &-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    transition-timing-function: ease !important;
+    transition-duration: 1000ms !important;
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
 
-.swiper-wrapper {
-  transition-timing-function: ease !important;
-  transition-duration: 1000ms !important;
+  &-wrapper {
+    transition-timing-function: ease !important;
+    transition-duration: 1000ms !important;
+  }
 }
 
 /* ======================== MEDIA QUERIES (TABLETS) ======================= */
