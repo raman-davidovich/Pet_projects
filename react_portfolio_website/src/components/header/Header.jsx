@@ -29,14 +29,11 @@ const Header = () => {
           <h1>Raman Davidovich</h1>
           <h2 className="text-light">Frontend Developer</h2>
         </Fade>
-
         <CTA />
-
         <HeaderSocials />
-
         <Fade delay={3000} direction="up" triggerOnce>
           <div className="me">
-            <img src={ME} alt="Smilling Raman" />
+            <img src={ME} alt="Smilling Raman" loading="eager" />
           </div>
         </Fade>
 

@@ -38,7 +38,7 @@ const About = () => {
         <Fade delay={1500} direction="left" triggerOnce>
           <div className="about__me">
             <div className="about__me-image">
-              <img src={ME} alt="Serious Raman" />
+              <img src={ME} alt="Serious Raman" loading="lazy" />
             </div>
           </div>
         </Fade>

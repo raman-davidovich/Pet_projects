@@ -22,7 +22,7 @@ const Portfolio = () => {
             return (
               <li key={id} className="portfolio__item">
                 <div className="portfolio__item-image">
-                  <img src={image} alt={`${title} screenshot`} />
+                  <img src={image} alt={`${title} screenshot`} loading="lazy" />
                 </div>
                 <h3>{title}</h3>
                 <p>{technologies}</p>
