@@ -8,13 +8,13 @@ const portfolioData = [
     technologies: "ReactJS, WebGi SDK, ThreeJS, GSAP",
     links: [
       {
-        href: "https://github.com",
+        href: "https://github.com/raman-davidovich/iphone-3d-website",
         className: "btn tooltip_portfolio",
         dataTooltipContent: "Visit repository",
         content: "Github",
       },
       {
-        href: "https://dribbble.com",
+        href: "https://iphoneanimation.tech/",
         className: "btn btn-primary tooltip_portfolio",
         dataTooltipContent: "Visit website",
         content: "Live Demo",
